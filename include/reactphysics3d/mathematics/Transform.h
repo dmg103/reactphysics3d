@@ -66,6 +66,9 @@ class Transform {
         /// Return the origin of the transform
         const Vector3& getPosition() const;
 
+        /// Return the origin of the transform
+        Vector3& getPosition();
+
         /// Set the origin of the transform
         void setPosition(const Vector3& position);
 
@@ -134,6 +137,11 @@ RP3D_FORCE_INLINE Transform::Transform(const Vector3& position, const Quaternion
 
 // Return the position of the transform
 RP3D_FORCE_INLINE const Vector3& Transform::getPosition() const {
+    return mPosition;
+}
+
+// Return the position of the transform
+RP3D_FORCE_INLINE Vector3& Transform::getPosition(){
     return mPosition;
 }
 
