@@ -115,6 +115,9 @@ class CollisionBody {
         /// Return the current position and orientation
         const Transform& getTransform() const;
 
+        /// Return the current position and orientation
+        Transform& getTransform();
+
         /// Set the current position and orientation
         virtual void setTransform(const Transform& transform);
 

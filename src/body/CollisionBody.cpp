@@ -218,6 +218,16 @@ const Transform& CollisionBody::getTransform() const {
     return mWorld.mTransformComponents.getTransform(mEntity);
 }
 
+// Return the current position and orientation
+/**
+ * @return The current transformation of the body that transforms the local-space
+ *         of the body into world-space
+ */
+Transform& CollisionBody::getTransform(){
+
+    return mWorld.mTransformComponents.getTransform(mEntity);
+}
+
 // Update the broad-phase state for this body (because it has moved for instance)
 void CollisionBody::updateBroadPhaseState() const {
 
