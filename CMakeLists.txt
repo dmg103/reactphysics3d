@@ -1,3 +1,9 @@
+#Swithc compilation
+IF(REACT_BUILD_SWITCH)
+  ADD_DEFINITIONS(-D_SWITCH)
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
+ENDIF()
+
 # Minimum cmake version required
 cmake_minimum_required(VERSION 3.8)
 

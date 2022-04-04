@@ -28,7 +28,7 @@ cp -r ./build/libreactphysics3dWin.a ./bin/
 rm -r build/
 mkdir build
 cd build
-cmake -D CMAKE_CXX_COMPILER=/opt/devkitpro/devkitA64/bin/aarch64-none-elf-g++ ..
+cmake -D CMAKE_CXX_COMPILER=/opt/devkitpro/devkitA64/bin/aarch64-none-elf-g++ .. -DREACT_BUILD_SWITCH=TRUE
 make -j4
 cd ..
 mv ./build/libreactphysics3d.a ./build/libreactphysics3dSwitch.a
